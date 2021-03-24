@@ -2,10 +2,10 @@
 
 # Project description
 
-HTTP server build with package Express (yarn add express@4.17.1)
+1. HTTP server build with package Express (yarn add express@4.17.1)
 
-Using handlebars
+2. Using handlebars templates
 
 # To run the project
 
-node server.js
+`npm start` or `yarn start`
