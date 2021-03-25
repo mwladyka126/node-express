@@ -5,7 +5,7 @@
   "repository": "https://github.com/mwladyka126/node-express.git",
   "author": "Malgorzata Wladyka <mwladyka126@gmail.com>",
   "license": "MIT",
-  "scripts":{
+  "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
