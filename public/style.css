@@ -26,7 +26,9 @@ label {
   display: block;
   margin: 1rem;
 }
-
+.title {
+  margin-left: 4rem;
+}
 input,
 textarea {
   background: rgba(0, 0, 0, 0.2);
