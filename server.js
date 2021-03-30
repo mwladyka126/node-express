@@ -41,7 +41,8 @@ app.get("/history", (req, res) => {
 });
 
 app.post("/contact/send-message", upload.single("fileName"), (req, res) => {
-  const { author, sender, title, message, fileName } = req.body;
+  const { author, sender, title, message } = req.body;
+  const { fileName } = req.file;
 
   if (author && sender && title && message && fileName) {
     res.render("contact", { isSent: true, fileName });
