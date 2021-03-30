@@ -40,12 +40,12 @@ app.get("/history", (req, res) => {
   res.render("history");
 });
 
-app.post("/contact/send-message", upload.single("fileName"), (req, res) => {
+app.post("/contact/send-message", upload.single("yourFile"), (req, res) => {
   const { author, sender, title, message } = req.body;
-  const { fileName } = req.file;
+  const { filename } = req.file;
 
-  if (author && sender && title && message && fileName) {
-    res.render("contact", { isSent: true, fileName });
+  if (author && sender && title && message && filename) {
+    res.render("contact", { isSent: true, filename });
   } else {
     res.render("contact", { isError: true });
   }
