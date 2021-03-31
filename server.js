@@ -41,12 +41,14 @@ app.get("/history", (req, res) => {
 });
 
 app.post("/contact/send-message", upload.single("yourFile"), (req, res) => {
-  const { author, sender, title, message } = req.body;
-  const { filename, originalname } = req.file;
+  try {
+    const { author, sender, title, message } = req.body;
+    const { filename, originalname } = req.file;
 
-  if (author && sender && title && message && filename) {
-    res.render("contact", { isSent: true, yourFileName: originalname });
-  } else {
+    if (author && sender && title && message && filename) {
+      res.render("contact", { isSent: true, yourFileName: originalname });
+    }
+  } catch (error) {
     res.render("contact", { isError: true });
   }
 });
